@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" xmlns:ejb="http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.1" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd">
+    <module-name>Login-ejb</module-name>
+    <enterprise-beans>
+        <session>
+            <!--IntegrationFrameworkService Session bean-->
+            <description>LoginBean</description>
+            <display-name>LoginBean</display-name>
+            <ejb-name>LoginBean</ejb-name>
+            <!-- <business-local>com.temenos.services.integrationframework.ejb.IntegrationFrameworkServiceBeanLocal</business-local> -->
+            <business-remote>com.anjal.Login.LoingEJBRemote</business-remote>
+            <ejb-class>com.anjal.Login.LoginBeanStateless</ejb-class>
+            <session-type>Stateless</session-type>
+            <!--<ejb-class>com.temenos.services.integrationframework.ejb.IntegrationFrameworkServiceBeanTAFJ</ejb-class>
+            <session-type>Stateless</session-type>-->
+            <transaction-type>Container</transaction-type>
+        </session>
+    </enterprise-beans>
+</ejb-jar>
